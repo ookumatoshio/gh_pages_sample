@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Temperature Converter</title>
+  <link rel="stylesheet" type="text/css" href="styles/app.css">
+  <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+
+  <header class="app-header">
+    <h1 class="header-title">Temperature Converter</h1>
+  </header>
+
+  <main class="app-main">
+    <div class="content-row">
+      <div class="column-half">
+        <label>Fahrenheit</label>
+        <input id="fahrenheitInput" class="number-input" type="number" mini="-459.669" placeholder="華氏温度を入力">
+      </div>
+
+      <div class="column-half">
+        <label>Celsius</label>
+        <input id="celsiusInput" class="number-input" type="number" mini="-273.15" placeholder="摂氏温度を入力">
+      </div>
+    </div>
+  </main>
+
+  <script src="script/app.js" async></script>
+  
+  <script type="application/javascript">
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./serviceWorker.js').then(function() {
+        console.log('servece worker registerd')
+      })
+    }
+  </script>
+</body>
+</html>
